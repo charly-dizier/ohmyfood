@@ -1,0 +1,19 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charly-dizier/ohmyfood.git"
+  },
+  "author": "Charly Dizier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/charly-dizier/ohmyfood/issues"
+  },
+  "homepage": "https://github.com/charly-dizier/ohmyfood#readme",
+  "description": ""
+}
