@@ -1,1 +1,39 @@
 hello world !
+
+*****************************************
+ ***************** question *************
+ -pourquoi les logo sont en haut avant un ctrl-s sass ?
+ -couleur 3eme logo card-fonctionnement ?
+
+
+
+
+
+
+***************************************
+ ***************problème *************
+ -top - 40px menu / décallage bas de page
+ -logo png ou juste txt + police
+ -heart non liens problème W3C
+
+
+
+************************************
+ *********** A faire ***************
+ -changement px > rem
+ -marge desktop > restau
+ -revoir fonctionnement width %
+
+
+
+**********************************************************
+ ****************** Clean ********************************
+ Base                   !
+ header                 !
+ footer                 !
+ card-fonctionnement    !
+ card-Restaurants       !
+ heart                  !  problème W3C balise <a>
+ home                   !
+ menu                   ! redécouper card dans un autre sass
+
