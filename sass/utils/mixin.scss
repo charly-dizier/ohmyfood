@@ -1,0 +1,47 @@
+/** FlexBox **/
+@mixin flex {
+    display: flex;
+}
+
+@mixin flex__content--center {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flex__item--center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex__column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin column {
+    flex-direction: column;
+}
+
+@mixin flex__column__content--center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@mixin flex__column__item--center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/** Margin / padding **/
+@mixin marginOff {
+    margin: 0;
+}
+
+@mixin marginPaddingOff {
+    margin: 0;
+    padding: 0;
+}

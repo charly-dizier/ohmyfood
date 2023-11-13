@@ -1,0 +1,91 @@
+.localisation {
+    @include flex__content--center;
+    z-index: 1;
+    height: 50px;
+    background-color: $Grey-2;
+    &__logo{
+        @include flex__item--center;
+        color: $Grey-dark;
+    }
+    &__txt {
+        @include flex__item--center;
+        color: $Grey-dark;
+        margin: 0 0 0 17px;
+    }
+}
+
+.selectionMenu {
+    @include flex__column__item--center;
+    text-align: center;
+    padding: 39px 0 50px 0;
+    background-color: $Grey;
+    &__title {
+        margin: 0 0 18px 0;
+        @media (min-width: 1024px) {
+            br {
+                display: none;
+            }
+        }
+    }
+    &__subtitle {
+        font-size: 18px;
+        font-weight: 300;
+        color: $Grey-dark;
+        margin: 0 0 27px 0;
+    }
+}
+
+.fonctionnement {
+    padding-bottom: 68px;
+    &__title {
+        width: 95%;
+        margin: auto;
+        padding: 50px 0 25px 0;
+        @media (min-width: 1024px) {
+            width: 80%;
+        }
+        &--txt {
+            @include marginOff;
+        }
+    }
+    &__card__container {
+        @include flex__column__item--center;
+        gap: 25px;
+        @media (min-width: 1024px) {
+            flex-direction: row;
+            padding: 0 10%;
+        }
+    }
+}
+
+.restaurant {
+    @include flex__column;
+    padding-bottom: 66px;
+    background-color: $Grey;
+    @media (min-width: 1024px) {
+        align-items: center;
+    }
+    &__title {
+        width: 90%;
+        height: 48px;
+        margin: auto;
+        padding-top: 50px;
+        @media (min-width: 1024px) {
+            width: 80%;
+        }
+        &--txt {
+            @include marginOff;
+        }
+    }
+    &__card__block {
+        @include flex__column__item--center;
+        gap: 18px;
+        @media (min-width: 1024px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 80%;
+            row-gap: 50px;
+            column-gap: 10%;
+        }
+    }
+}

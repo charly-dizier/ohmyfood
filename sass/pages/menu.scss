@@ -1,0 +1,78 @@
+.head__img {
+    height: 275px;
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+}
+
+.menu {
+    &__container {
+        @include flex__column__item--center;
+        position: relative;
+        top: -40px;
+        background-color: $Grey;
+        border-radius: 35px 35px 0 0;
+        gap: 40px;
+        padding-bottom: 40px;
+        @media (min-width: 1024px) {
+            max-width: 1055px;
+            margin: auto;
+        }
+    }
+    &__head {
+        @include flex__item--center;
+        width: 90%;
+        margin-top: 32px;
+        @media (min-width: 1024px) {
+            justify-content: center;
+        }
+        &--title {
+            @include font-title;
+            @include marginOff;
+            font-size: 28px;
+            padding-right: 30px;
+        }
+    }
+    &__section {
+        @include flex__column;
+        width: 90%;
+        gap: 12px;
+        &__title {
+            &--txt {
+                @include marginOff;
+                font-size: 16px;
+                font-weight: 300;
+                text-transform: uppercase;
+            }
+            &--underline {
+                border-bottom: 3px solid $Green;
+                width: 40px;
+            }
+        }
+        &__card {
+            @include flex__column;
+            position: relative;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.10); 
+            padding: 15px;
+            gap: 5px;
+            &--title {
+                @include marginOff;
+                font-size: 18px;
+                font-weight: 500;
+            }
+            &--subtitle {
+                @include marginOff;
+                font-size: 15px;
+            }
+            &--price {
+                @include marginOff;
+                position: absolute;
+                bottom: 15px;
+                right: 15px;
+            }
+        }
+    }
+}
+

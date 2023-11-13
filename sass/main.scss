@@ -1,1 +1,16 @@
+@import "./utils/color.scss";
+@import "./utils/police.scss";
+@import "./utils/mixin.scss";
+
 @import "./base/base.scss";
+
+@import "./composant/btn.scss";
+@import "./composant/heart.scss";
+@import "./composant/card-fonctionnement.scss";
+@import "./composant/card-restaurants.scss";
+
+@import "./layout/header.scss";
+@import "./layout/footer.scss";
+
+@import "./pages/home.scss";
+@import "./pages/menu.scss";

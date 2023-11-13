@@ -1,0 +1,44 @@
+.fonctionnement__card {
+    @include flex__item--center;
+    position: relative;
+    width: 87%;
+    height: 72px;
+    border-radius: 20px;
+    background-color: $Grey;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    @media (min-width: 1024px) {
+        width: 100%;
+    }
+    &--number {
+        @include flex;
+        position: absolute;
+        left: -12px;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-color: $PrimaryColor;
+        &--txt {
+            color: white;
+            margin: auto;
+        }
+    }
+    &__containerTxt {
+        @include flex;
+        width: 80%;
+        margin: auto;
+        &--icon {
+            @include flex__item--center;
+            justify-content: center;
+            color: $Grey4;
+            margin-right: 25px; 
+        }
+        &--txt {
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+}
+
+.fa-store {
+    color: $PrimaryColor;
+}

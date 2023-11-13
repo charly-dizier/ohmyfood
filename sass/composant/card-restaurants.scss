@@ -1,0 +1,52 @@
+.restaurant__card {
+    width: 90%;
+    position: relative;
+    @media (min-width: 1024px) {
+        width: 100%;
+    }
+    &--img {
+        @include flex; 
+        object-fit: cover;
+        height: 231px;
+        width: 100%;
+        border-radius: 15px 15px 0 0;
+        &__txt {
+            @include flex__content--center;
+            position: absolute;
+            top: 13px;
+            right: 12px;
+            width: 80px;
+            height: 29px;
+            border-radius: 2px;
+            background-color: $Green;
+            &--txt {
+                @include flex__item--center;
+                font-size: 14px;
+                color: $Green-Font;
+            }
+        }
+    }
+    &__txt {
+        background-color: white;
+        border-radius: 0 0 15px 15px;
+        &--title {
+            @include marginOff;
+            color: black;
+            font-size: 18px;
+            padding-top: 16px;
+            padding-left: 13px;
+        }
+        &--subtitle {
+            @include marginOff;
+            color: black;
+            font-size: 17px;
+            padding-left: 13px;
+            padding-bottom: 12px;
+        }
+        &--icon {
+            position: absolute;
+            right: 25px;
+            bottom: 33px;
+        }
+    }
+}

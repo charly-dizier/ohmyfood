@@ -1,0 +1,18 @@
+body {
+    @include flex__content--center;
+    @include marginPaddingOff;
+}
+
+.main-container {
+    @include font-txt;
+    max-width: 768px;
+    width: 100%;
+    box-sizing: border-box;
+    @media (min-width: 1024px) {
+        max-width: 1440px;
+    }
+}
+
+a {
+    text-decoration: none;
+}
