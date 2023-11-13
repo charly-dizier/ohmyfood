@@ -1,12 +1,12 @@
-.fa-heart {
-    &.fa-regular {
+.heart-check {
+    &-empty {
         font-size: 22px;
         cursor: pointer;
         color: black;
     }
-    &.fa-solid {
+    &-full {
         font-size: 22px;
-        display: none;
+        display: none !important;
         cursor: pointer;
         color: transparent;
         background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
@@ -16,10 +16,10 @@
 
 .hidden-checkbox {
     display: none;
-    &:checked + .heart-label .fa-regular.fa-heart {
+    &:checked + .heart-label .heart-check-empty {
         display: none;
     }
-    &:checked + .heart-label .fa-solid.fa-heart {
-        display: block;
+    &:checked + .heart-label .heart-check-full {
+        display: block !important;
     }
 }

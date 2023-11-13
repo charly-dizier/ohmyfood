@@ -1,0 +1,24 @@
+.heart {
+    &__box {
+        &:hover .heart__empty {
+            opacity: 0;
+        }
+        &:hover .heart__full {
+            opacity: 1;
+        }
+    }
+    &__empty {
+        position: absolute;
+        
+        color: black;
+        opacity: 1;
+    }
+    &__full {
+        position: absolute;
+        color: transparent;
+        opacity: 0;
+        background: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+        -webkit-background-clip: text; /** pour fonctionnement chrome et safari **/
+        background-clip: text;
+    }
+}

@@ -17,8 +17,8 @@
         }
         &--icon {
             @include flex__item--center;
-            padding-left: 20px;
+            margin-left: 20px;
             color: black;
         }
     } 
-}
+} 

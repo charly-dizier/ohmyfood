@@ -4,7 +4,9 @@
     height: 50px;
     background-color: $Grey-2;
     &__logo{
-        @include flex__item--center;
+        // @include flex__item--center;
+        display: flex !important; /** lire la doc* **/
+        align-items: center;
         color: $Grey-dark;
     }
     &__txt {

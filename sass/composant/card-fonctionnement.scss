@@ -27,8 +27,8 @@
         width: 80%;
         margin: auto;
         &--icon {
-            @include flex__item--center;
-            justify-content: center;
+            display: flex !important;
+            align-items: center;
             color: $Grey4;
             margin-right: 25px; 
         }

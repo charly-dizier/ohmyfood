@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /** FlexBox **/
 /** Margin / padding **/
 body {
@@ -27,7 +28,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  background-color: gray; /** ajout d'un background pour éclaircir le hover **/
   border-radius: 25px;
   height: 50px;
   margin: 0px;
@@ -38,7 +40,7 @@ a {
   color: white;
 }
 .btn:hover {
-  background: aqua;
+  background-color: #fff;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 }
 
@@ -50,14 +52,34 @@ a {
   width: 186px;
 }
 
-.fa-heart.fa-regular {
+.heart__box:hover .heart__empty {
+  opacity: 0;
+}
+.heart__box:hover .heart__full {
+  opacity: 1;
+}
+.heart__empty {
+  position: absolute;
+  color: black;
+  opacity: 1;
+}
+.heart__full {
+  position: absolute;
+  color: transparent;
+  opacity: 0;
+  background: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  -webkit-background-clip: text; /** pour fonctionnement chrome et safari **/
+  background-clip: text;
+}
+
+.heart-check-empty {
   font-size: 22px;
   cursor: pointer;
   color: black;
 }
-.fa-heart.fa-solid {
+.heart-check-full {
   font-size: 22px;
-  display: none;
+  display: none !important;
   cursor: pointer;
   color: transparent;
   background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
@@ -67,11 +89,11 @@ a {
 .hidden-checkbox {
   display: none;
 }
-.hidden-checkbox:checked + .heart-label .fa-regular.fa-heart {
+.hidden-checkbox:checked + .heart-label .heart-check-empty {
   display: none;
 }
-.hidden-checkbox:checked + .heart-label .fa-solid.fa-heart {
-  display: block;
+.hidden-checkbox:checked + .heart-label .heart-check-full {
+  display: block !important;
 }
 
 .fonctionnement__card {
@@ -108,9 +130,8 @@ a {
   margin: auto;
 }
 .fonctionnement__card__containerTxt--icon {
-  display: flex;
+  display: flex !important;
   align-items: center;
-  justify-content: center;
   color: #7E7E7E;
   margin-right: 25px;
 }
@@ -176,8 +197,10 @@ a {
 }
 .restaurant__card__txt--icon {
   position: absolute;
-  right: 25px;
-  bottom: 33px;
+  cursor: pointer;
+  font-size: 22px;
+  right: 40px;
+  bottom: 45px;
 }
 
 .header {
@@ -210,7 +233,7 @@ a {
 .header__box--icon {
   display: flex;
   align-items: center;
-  padding-left: 20px;
+  margin-left: 20px;
   color: black;
 }
 
@@ -306,7 +329,7 @@ a {
   background-color: #EAEAEA;
 }
 .localisation__logo {
-  display: flex;
+  display: flex !important; /** lire la doc* **/
   align-items: center;
   color: #353535;
 }
