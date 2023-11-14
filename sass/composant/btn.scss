@@ -1,7 +1,7 @@
 .btn {
     @include flex__item--center;
     justify-content: center;
-    background-image: $btn;
+    background-image: $btnGradient;
     background-color: gray; /** ajout d'un background pour éclaircir le hover **/
     border-radius: 25px;
     height: 50px;

@@ -52,24 +52,29 @@ a {
   width: 186px;
 }
 
+.heart__box {
+  cursor: pointer;
+  font-size: 22px;
+}
 .heart__box:hover .heart__empty {
-  opacity: 0;
+  background: linear-gradient(180deg, #9356DC 0%, #FF79DA 100%);
+  color: transparent;
+  background-clip: text; /** pour apliquer uniquement sur la bordure **/
 }
 .heart__box:hover .heart__full {
-  opacity: 1;
+  transform: scale(1);
 }
 .heart__empty {
   position: absolute;
   color: black;
-  opacity: 1;
 }
 .heart__full {
   position: absolute;
   color: transparent;
-  opacity: 0;
-  background: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
-  -webkit-background-clip: text; /** pour fonctionnement chrome et safari **/
+  background: linear-gradient(180deg, #9356DC 0%, #FF79DA 100%);
   background-clip: text;
+  transform: scale(0);
+  transition: all 300ms;
 }
 
 .heart-check-empty {
@@ -197,8 +202,6 @@ a {
 }
 .restaurant__card__txt--icon {
   position: absolute;
-  cursor: pointer;
-  font-size: 22px;
   right: 40px;
   bottom: 45px;
 }

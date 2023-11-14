@@ -11,11 +11,6 @@ $Grey-2: #EAEAEA;
 $Grey-dark: #353535;
 $Grey4: #7E7E7E;
 
-
-$Button-Gradient: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
-$Button-Gradient-hover: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), 
-                        linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
-
-
-$btn: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+$btnGradient: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+$heartGradient: linear-gradient(180deg, #9356DC 0%, #FF79DA 100%);
 

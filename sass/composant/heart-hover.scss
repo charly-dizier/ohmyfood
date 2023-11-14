@@ -1,24 +1,26 @@
 .heart {
     &__box {
+        cursor: pointer;
+        font-size: 22px;
         &:hover .heart__empty {
-            opacity: 0;
+                background: $heartGradient;
+                color: transparent;
+                background-clip: text; /** pour apliquer uniquement sur la bordure **/
         }
         &:hover .heart__full {
-            opacity: 1;
+            transform: scale(1);
         }
     }
     &__empty {
         position: absolute;
-        
         color: black;
-        opacity: 1;
     }
     &__full {
         position: absolute;
         color: transparent;
-        opacity: 0;
-        background: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
-        -webkit-background-clip: text; /** pour fonctionnement chrome et safari **/
+        background: $heartGradient;
         background-clip: text;
+        transform: scale(0);
+        transition: all 300ms;
     }
 }
