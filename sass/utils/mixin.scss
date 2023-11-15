@@ -3,35 +3,46 @@
     display: flex;
 }
 
-@mixin flex__content--center {
-    display: flex;
-    justify-content: center;
-}
-
-@mixin flex__item--center {
-    display: flex;
-    align-items: center;
-}
-
-@mixin flex__column {
-    display: flex;
-    flex-direction: column;
-}
-
 @mixin column {
     flex-direction: column;
 }
 
-@mixin flex__column__content--center {
-    display: flex;
-    flex-direction: column;
+@mixin item-center {
+    align-items: center;
+}
+
+@mixin content-center {
     justify-content: center;
 }
 
+
+@mixin flex__content--center {
+    @include flex;
+    @include content-center;
+}
+
+@mixin flex__item--center {
+    @include flex;
+    @include item-center;
+}
+
+@mixin flex__column {
+    @include flex;
+    @include column;
+}
+
+
+
+@mixin flex__column__content--center {
+    @include flex;
+    @include column;
+    @include content-center;
+}
+
 @mixin flex__column__item--center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex;
+    @include column;
+    @include item-center;
 }
 
 
@@ -44,4 +55,12 @@
 @mixin marginPaddingOff {
     margin: 0;
     padding: 0;
+}
+
+
+/** Divers **/
+@mixin txtOverflow {
+    text-overflow: ellipsis; /** on ajoute "..." si le text est cacher **/
+    overflow: hidden; /** on cache le text **/
+    white-space: nowrap; /** on évite le retour a la ligne **/
 }

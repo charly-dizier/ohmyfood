@@ -1,0 +1,49 @@
+.menu__section__card {
+    display: flex;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.10); 
+    overflow: hidden;
+    gap: 5px;
+    &:hover {
+        cursor: pointer;
+    }
+    &:hover .menu__section__card__checkedBox {
+        margin-right: 0px;
+    }
+    &__txtBox {
+        overflow: hidden; 
+        padding: 15px;
+        flex: 1;
+        &--title {
+            @include marginOff;
+            @include txtOverflow;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        &--subtitle {
+            @include marginOff;
+            @include txtOverflow;
+            font-size: 15px;
+        }
+    }
+    &--price {
+        @include flex;
+        align-items: flex-end;
+        margin: 0 15px 15px 0px; 
+        font-size: 15px;
+    }
+    &__checkedBox {
+        @include flex__item--center;
+        width: 60px;
+        background-color: $Green;
+        border-radius: 0 15px 15px 0;
+        margin-right: -60px;
+        transition: 500ms ease-in-out;
+        &--icon {
+            margin: auto;
+            color: #fff;
+            font-size: 22px;
+        }
+    }
+}

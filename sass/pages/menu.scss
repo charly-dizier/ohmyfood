@@ -9,7 +9,7 @@
     &__container {
         @include flex__column__item--center;
         position: relative;
-        top: -40px;
+        margin-top: -40px;
         background-color: $Grey;
         border-radius: 35px 35px 0 0;
         gap: 40px;
@@ -17,6 +17,7 @@
         @media (min-width: 1024px) {
             max-width: 1055px;
             margin: auto;
+            margin-top: -40px;
         }
     }
     &__head {
@@ -31,6 +32,9 @@
             @include marginOff;
             font-size: 28px;
             padding-right: 30px;
+        }
+        &--icon {
+            @include flex__item--center;
         }
     }
     &__section {
@@ -49,30 +53,5 @@
                 width: 40px;
             }
         }
-        &__card {
-            @include flex__column;
-            position: relative;
-            background-color: white;
-            border-radius: 15px;
-            box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.10); 
-            padding: 15px;
-            gap: 5px;
-            &--title {
-                @include marginOff;
-                font-size: 18px;
-                font-weight: 500;
-            }
-            &--subtitle {
-                @include marginOff;
-                font-size: 15px;
-            }
-            &--price {
-                @include marginOff;
-                position: absolute;
-                bottom: 15px;
-                right: 15px;
-            }
-        }
     }
 }
-

@@ -22,6 +22,9 @@
         }
     }
     &__part2 {
+        &--link {
+            width: max-content;
+        }
         &__block {
             @include flex__column;
             gap: 7px;
