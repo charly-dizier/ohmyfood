@@ -1,11 +1,11 @@
 .heart {
     &__box {
         cursor: pointer;
-        font-size: 22px;
+        font-size: 1.375rem;
         &:hover .heart__empty {
-                background: $heartGradient;
-                color: transparent;
-                background-clip: text; /** pour apliquer uniquement sur la bordure **/
+            background: $heartGradient;
+            color: transparent;
+            background-clip: text; /** pour apliquer uniquement sur la bordure **/
         }
         &:hover .heart__full {
             transform: scale(1);

@@ -30,7 +30,7 @@
         &--title {
             @include font-title;
             @include marginOff;
-            font-size: 28px;
+            font-size: 1.75rem;
             padding-right: 30px;
         }
         &--icon {
@@ -44,7 +44,7 @@
         &__title {
             &--txt {
                 @include marginOff;
-                font-size: 16px;
+                font-size: 1rem;
                 font-weight: 300;
                 text-transform: uppercase;
             }
@@ -53,5 +53,19 @@
                 width: 40px;
             }
         }
+    }
+}
+
+.animBox {
+    &-1 {
+        @include animMenu;
+    }
+    &-2 {
+        @include animMenu;
+        animation-delay: 300ms;  
+    }
+    &-3 {
+        @include animMenu;
+        animation-delay: 600ms;
     }
 }

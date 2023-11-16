@@ -1,6 +1,6 @@
 .footer {
     @include flex__column;
-    background-color: $Grey-dark;
+    background-color: $Grey-3;
     padding: 22px 25px;
     @media (min-width: 1024px) {
         flex-direction: row-reverse;
@@ -18,7 +18,7 @@
             @include font-title;
             @include marginOff;
             color: white;
-            font-size: 18px;
+            font-size: 1.125rem;
         }
     }
     &__part2 {

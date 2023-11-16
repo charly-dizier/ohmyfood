@@ -4,14 +4,13 @@
     height: 50px;
     background-color: $Grey-2;
     &__logo{
-        // @include flex__item--center;
-        display: flex !important; /** lire la doc* **/
+        display: flex !important; /** MOAB **/ 
         align-items: center;
-        color: $Grey-dark;
+        color: $Grey-3;
     }
     &__txt {
         @include flex__item--center;
-        color: $Grey-dark;
+        color: $Grey-3;
         margin: 0 0 0 17px;
     }
 }
@@ -30,9 +29,9 @@
         }
     }
     &__subtitle {
-        font-size: 18px;
+        font-size: 1.125rem;
         font-weight: 300;
-        color: $Grey-dark;
+        color: $Grey-3;
         margin: 0 0 27px 0;
     }
 }

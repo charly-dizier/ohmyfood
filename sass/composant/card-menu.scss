@@ -18,20 +18,20 @@
         &--title {
             @include marginOff;
             @include txtOverflow;
-            font-size: 18px;
+            font-size: 1.125rem;
             font-weight: 500;
         }
         &--subtitle {
             @include marginOff;
             @include txtOverflow;
-            font-size: 15px;
+            font-size: 0.938rem;
         }
     }
     &--price {
         @include flex;
         align-items: flex-end;
         margin: 0 15px 15px 0px; 
-        font-size: 15px;
+        font-size: 0.938rem;
     }
     &__checkedBox {
         @include flex__item--center;
@@ -43,21 +43,7 @@
         &--icon {
             margin: auto;
             color: #fff;
-            font-size: 22px;
+            font-size: 1.375rem;
         }
-    }
-}
-
-.animBox {
-    &-1 {
-        @include animMenu;
-    }
-    &-2 {
-        @include animMenu;
-        animation-delay: 300ms;  
-    }
-    &-3 {
-        @include animMenu;
-        animation-delay: 600ms;
     }
 }

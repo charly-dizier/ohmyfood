@@ -1,0 +1,26 @@
+.loader {
+    @include animLoaderDispear;
+    @include flex__center--all;
+    background: #353535b2;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    &__circle {
+        @include animLoader;
+        width: 200px;
+        height: 200px;
+        border: 10px solid $PrimaryColor;
+        border-top: 10px solid $SecondaryColor;
+        border-radius: 50%;
+    }
+    &__icon {
+        position: absolute;
+        font-size: 7.625rem;
+        color: transparent;
+        background: $btnGradient;
+        background-clip: text;
+    }
+}

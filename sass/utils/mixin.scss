@@ -26,6 +26,12 @@
     @include item-center;
 }
 
+@mixin flex__center--all {
+    @include flex;
+    @include item-center;
+    @include content-center;
+}
+
 @mixin flex__column {
     @include flex;
     @include column;

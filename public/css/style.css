@@ -2,6 +2,7 @@
 /** FlexBox **/
 /** Margin / padding **/
 /** Divers **/
+/** Animation Loader **/
 /** Animation Menu**/
 body {
   display: flex;
@@ -26,6 +27,52 @@ a {
   text-decoration: none;
 }
 
+.loader {
+  animation: dispear 250ms 2500ms linear both;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(53, 53, 53, 0.6980392157);
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+}
+@keyframes dispear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -100;
+  }
+}
+.loader__circle {
+  animation: rotation 1000ms linear infinite;
+  width: 200px;
+  height: 200px;
+  border: 10px solid #9356DC;
+  border-top: 10px solid #FF79DA;
+  border-radius: 50%;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loader__icon {
+  position: absolute;
+  font-size: 7.625rem;
+  color: transparent;
+  background: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  background-clip: text;
+}
+
 .btn {
   display: flex;
   align-items: center;
@@ -38,12 +85,12 @@ a {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   transition: all 300ms;
 }
-.btn--txt {
-  color: white;
-}
 .btn:hover {
   background-color: #fff;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+}
+.btn--txt {
+  color: white;
 }
 .btn-explorer {
   width: 218px;
@@ -54,7 +101,7 @@ a {
 
 .heart__box {
   cursor: pointer;
-  font-size: 22px;
+  font-size: 1.375rem;
 }
 .heart__box:hover .heart__empty {
   background: linear-gradient(180deg, #9356DC 0%, #FF79DA 100%);
@@ -111,18 +158,17 @@ a {
   margin: auto;
 }
 .fonctionnement__card__containerTxt--icon {
-  display: flex !important;
+  display: flex !important; /** MOAB **/
   align-items: center;
   color: #7E7E7E;
   margin-right: 25px;
 }
-.fonctionnement__card__containerTxt--txt {
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.fa-store {
+.fonctionnement__card__containerTxt--icon.fa-store {
   color: #9356DC;
+}
+.fonctionnement__card__containerTxt--txt {
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .restaurant__card {
@@ -155,7 +201,7 @@ a {
 .restaurant__card--img__txt--txt {
   display: flex;
   align-items: center;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #008766;
 }
 .restaurant__card__txt {
@@ -165,14 +211,14 @@ a {
 .restaurant__card__txt--title {
   margin: 0;
   color: black;
-  font-size: 18px;
+  font-size: 1.125rem;
   padding-top: 16px;
   padding-left: 13px;
 }
 .restaurant__card__txt--subtitle {
   margin: 0;
   color: black;
-  font-size: 17px;
+  font-size: 1.063rem;
   padding-left: 13px;
   padding-bottom: 12px;
 }
@@ -206,7 +252,7 @@ a {
   text-overflow: ellipsis; /** on ajoute "..." si le text est cacher **/
   overflow: hidden; /** on cache le text **/
   white-space: nowrap; /** on évite le retour a la ligne **/
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 500;
 }
 .menu__section__card__txtBox--subtitle {
@@ -214,13 +260,13 @@ a {
   text-overflow: ellipsis; /** on ajoute "..." si le text est cacher **/
   overflow: hidden; /** on cache le text **/
   white-space: nowrap; /** on évite le retour a la ligne **/
-  font-size: 15px;
+  font-size: 0.938rem;
 }
 .menu__section__card--price {
   display: flex;
   align-items: flex-end;
   margin: 0 15px 15px 0px;
-  font-size: 15px;
+  font-size: 0.938rem;
 }
 .menu__section__card__checkedBox {
   display: flex;
@@ -234,70 +280,7 @@ a {
 .menu__section__card__checkedBox--icon {
   margin: auto;
   color: #fff;
-  font-size: 22px;
-}
-
-.animBox-1 {
-  transform: scaleY(0); /** Y pour selection verticale **/
-  opacity: 0;
-  animation: animAppear 1000ms forwards cubic-bezier(0.37, 1.67, 0.54, 0.93); /** Appel de la keyframe + durée + fill-mode + Rythme organique **/
-}
-@keyframes animAppear {
-  0% {
-    transform: scaleY(0);
-    opacity: 0;
-  }
-  60% {
-    opacity: 0.4;
-  }
-  85%, 100% {
-    opacity: 1;
-  }
-  100% {
-    transform: scaleY(1);
-  }
-}
-.animBox-2 {
-  transform: scaleY(0); /** Y pour selection verticale **/
-  opacity: 0;
-  animation: animAppear 1000ms forwards cubic-bezier(0.37, 1.67, 0.54, 0.93); /** Appel de la keyframe + durée + fill-mode + Rythme organique **/
-  animation-delay: 300ms;
-}
-@keyframes animAppear {
-  0% {
-    transform: scaleY(0);
-    opacity: 0;
-  }
-  60% {
-    opacity: 0.4;
-  }
-  85%, 100% {
-    opacity: 1;
-  }
-  100% {
-    transform: scaleY(1);
-  }
-}
-.animBox-3 {
-  transform: scaleY(0); /** Y pour selection verticale **/
-  opacity: 0;
-  animation: animAppear 1000ms forwards cubic-bezier(0.37, 1.67, 0.54, 0.93); /** Appel de la keyframe + durée + fill-mode + Rythme organique **/
-  animation-delay: 600ms;
-}
-@keyframes animAppear {
-  0% {
-    transform: scaleY(0);
-    opacity: 0;
-  }
-  60% {
-    opacity: 0.4;
-  }
-  85%, 100% {
-    opacity: 1;
-  }
-  100% {
-    transform: scaleY(1);
-  }
+  font-size: 1.375rem;
 }
 
 .header {
@@ -319,7 +302,7 @@ a {
 }
 .header__box--title {
   font-family: "Shrikhand", sans-serif;
-  font-size: 30px;
+  font-size: 1.875rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -359,13 +342,13 @@ a {
 }
 .footer__logo--txt {
   font-family: "Shrikhand", sans-serif;
-  font-size: 30px;
+  font-size: 1.875rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   margin: 0;
   color: white;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 .footer__part2--link {
   width: max-content;
@@ -429,7 +412,7 @@ a {
   background-color: #EAEAEA;
 }
 .localisation__logo {
-  display: flex !important; /** lire la doc* **/
+  display: flex !important; /** MOAB **/
   align-items: center;
   color: #353535;
 }
@@ -457,7 +440,7 @@ a {
   }
 }
 .selectionMenu__subtitle {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 300;
   color: #353535;
   margin: 0 0 27px 0;
@@ -571,12 +554,12 @@ a {
 }
 .menu__head--title {
   font-family: "Shrikhand", sans-serif;
-  font-size: 30px;
+  font-size: 1.875rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   margin: 0;
-  font-size: 28px;
+  font-size: 1.75rem;
   padding-right: 30px;
 }
 .menu__head--icon {
@@ -591,13 +574,76 @@ a {
 }
 .menu__section__title--txt {
   margin: 0;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 300;
   text-transform: uppercase;
 }
 .menu__section__title--underline {
   border-bottom: 3px solid #99E2D0;
   width: 40px;
+}
+
+.animBox-1 {
+  transform: scaleY(0); /** Y pour selection axe verticale **/
+  opacity: 0;
+  animation: animAppear 1000ms forwards cubic-bezier(0.37, 1.67, 0.54, 0.93); /** Appel de la keyframe + durée + fill-mode + Rythme organique **/
+}
+@keyframes animAppear {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.4;
+  }
+  85%, 100% {
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+.animBox-2 {
+  transform: scaleY(0); /** Y pour selection axe verticale **/
+  opacity: 0;
+  animation: animAppear 1000ms forwards cubic-bezier(0.37, 1.67, 0.54, 0.93); /** Appel de la keyframe + durée + fill-mode + Rythme organique **/
+  animation-delay: 300ms;
+}
+@keyframes animAppear {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.4;
+  }
+  85%, 100% {
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+.animBox-3 {
+  transform: scaleY(0); /** Y pour selection axe verticale **/
+  opacity: 0;
+  animation: animAppear 1000ms forwards cubic-bezier(0.37, 1.67, 0.54, 0.93); /** Appel de la keyframe + durée + fill-mode + Rythme organique **/
+  animation-delay: 600ms;
+}
+@keyframes animAppear {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.4;
+  }
+  85%, 100% {
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
