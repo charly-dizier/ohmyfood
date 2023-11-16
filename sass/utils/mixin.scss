@@ -31,8 +31,6 @@
     @include column;
 }
 
-
-
 @mixin flex__column__content--center {
     @include flex;
     @include column;
@@ -44,7 +42,6 @@
     @include column;
     @include item-center;
 }
-
 
 
 /** Margin / padding **/

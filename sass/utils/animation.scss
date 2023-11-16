@@ -1,0 +1,21 @@
+/** Animation Menu**/
+@mixin animMenu {
+    transform: scaleY(0); /** Y pour selection verticale **/
+    opacity: 0; 
+    animation: animAppear 1000ms forwards cubic-bezier(.37,1.67,.54,.93); /** Appel de la keyframe + durée + fill-mode + Rythme organique **/
+    @keyframes animAppear {
+        0% {
+            transform: scaleY(0);
+            opacity: 0;
+        }
+        60% {
+            opacity: 0.4;
+        }
+        85%,100% {
+            opacity: 1;
+        }
+        100% {
+            transform: scaleY(1);
+        }
+    }
+}

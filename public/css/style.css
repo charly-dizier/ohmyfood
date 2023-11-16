@@ -2,6 +2,7 @@
 /** FlexBox **/
 /** Margin / padding **/
 /** Divers **/
+/** Animation Menu**/
 body {
   display: flex;
   justify-content: center;
@@ -234,6 +235,69 @@ a {
   margin: auto;
   color: #fff;
   font-size: 22px;
+}
+
+.animBox-1 {
+  transform: scaleY(0); /** Y pour selection verticale **/
+  opacity: 0;
+  animation: animAppear 1000ms forwards cubic-bezier(0.37, 1.67, 0.54, 0.93); /** Appel de la keyframe + durée + fill-mode + Rythme organique **/
+}
+@keyframes animAppear {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.4;
+  }
+  85%, 100% {
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+.animBox-2 {
+  transform: scaleY(0); /** Y pour selection verticale **/
+  opacity: 0;
+  animation: animAppear 1000ms forwards cubic-bezier(0.37, 1.67, 0.54, 0.93); /** Appel de la keyframe + durée + fill-mode + Rythme organique **/
+  animation-delay: 300ms;
+}
+@keyframes animAppear {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.4;
+  }
+  85%, 100% {
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+.animBox-3 {
+  transform: scaleY(0); /** Y pour selection verticale **/
+  opacity: 0;
+  animation: animAppear 1000ms forwards cubic-bezier(0.37, 1.67, 0.54, 0.93); /** Appel de la keyframe + durée + fill-mode + Rythme organique **/
+  animation-delay: 600ms;
+}
+@keyframes animAppear {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.4;
+  }
+  85%, 100% {
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1);
+  }
 }
 
 .header {
