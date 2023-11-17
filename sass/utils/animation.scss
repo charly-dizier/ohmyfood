@@ -45,3 +45,17 @@
         }
     }
 }
+
+.animBoxMenu {
+    &-1 {
+        @include animMenu;
+    }
+    &-2 {
+        @include animMenu;
+        animation-delay: 300ms;  
+    }
+    &-3 {
+        @include animMenu;
+        animation-delay: 600ms;
+    }
+}
