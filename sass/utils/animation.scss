@@ -24,11 +24,12 @@
     }
 }
 
-/** Animation Menu**/
+/** Animation Menu **/
 @mixin animMenu {
     transform: scaleY(0); /** Y pour selection axe verticale **/
-    opacity: 0; 
-    animation: animAppear 1000ms forwards cubic-bezier(.37,1.67,.54,.93); /** Appel de la keyframe + durée + fill-mode + Rythme organique **/
+    opacity: 0;
+    /** Appel de la keyframe + durée + fill-mode + Rythme organique **/ 
+    animation: animAppear 1000ms forwards cubic-bezier(.37,1.67,.54,.93); 
     @keyframes animAppear {
         0% {
             transform: scaleY(0);
