@@ -137,6 +137,7 @@ a {
   color: transparent;
   background: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   background-clip: text;
+  -webkit-background-clip: text; /** pour fonctionnement chrome et safari **/
 }
 
 .btn {
@@ -177,6 +178,7 @@ a {
 }
 .heart__box:hover .heart__full {
   transform: scale(1);
+  -webkit-background-clip: text; /** pour fonctionnement chrome et safari **/
 }
 .heart__empty {
   position: absolute;
@@ -187,6 +189,7 @@ a {
   color: transparent;
   background: linear-gradient(180deg, #9356DC 0%, #FF79DA 100%);
   background-clip: text;
+  -webkit-background-clip: text; /** pour fonctionnement chrome et safari **/
   transform: scale(0);
   transition: all 300ms;
 }

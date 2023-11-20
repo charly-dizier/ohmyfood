@@ -10,6 +10,7 @@
         }
         &:hover .heart__full {
             transform: scale(1);
+            -webkit-background-clip: text; /** pour fonctionnement chrome et safari **/
         }
     }
     &__empty {
@@ -21,6 +22,7 @@
         color: transparent;
         background: $heartGradient;
         background-clip: text;
+        -webkit-background-clip: text; /** pour fonctionnement chrome et safari **/
         transform: scale(0);
         transition: all 300ms;
     }
