@@ -12,6 +12,7 @@
 }
 
 @mixin animLoaderDispear {
+    /** Appel de la keyframe + durée + timing + fill-mode **/
     animation: dispear 250ms 2500ms linear both;
     @keyframes dispear {
         0% {
@@ -28,7 +29,7 @@
 @mixin animMenu {
     transform: scaleY(0); /** Y pour selection axe verticale **/
     opacity: 0;
-    /** Appel de la keyframe + durée + fill-mode + Rythme organique **/ 
+    /** Appel de la keyframe + durée + fill-mode + timing (Rythme organique) **/ 
     animation: animAppear 1000ms forwards cubic-bezier(.37,1.67,.54,.93); 
     @keyframes animAppear {
         0% {

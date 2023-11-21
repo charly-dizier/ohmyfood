@@ -7,7 +7,7 @@
 .animBoxMenu-1 {
   transform: scaleY(0); /** Y pour selection axe verticale **/
   opacity: 0;
-  /** Appel de la keyframe + durée + fill-mode + Rythme organique **/
+  /** Appel de la keyframe + durée + fill-mode + timing (Rythme organique) **/
   animation: animAppear 1000ms forwards cubic-bezier(0.37, 1.67, 0.54, 0.93);
 }
 @keyframes animAppear {
@@ -28,7 +28,7 @@
 .animBoxMenu-2 {
   transform: scaleY(0); /** Y pour selection axe verticale **/
   opacity: 0;
-  /** Appel de la keyframe + durée + fill-mode + Rythme organique **/
+  /** Appel de la keyframe + durée + fill-mode + timing (Rythme organique) **/
   animation: animAppear 1000ms forwards cubic-bezier(0.37, 1.67, 0.54, 0.93);
   animation-delay: 300ms;
 }
@@ -50,7 +50,7 @@
 .animBoxMenu-3 {
   transform: scaleY(0); /** Y pour selection axe verticale **/
   opacity: 0;
-  /** Appel de la keyframe + durée + fill-mode + Rythme organique **/
+  /** Appel de la keyframe + durée + fill-mode + timing (Rythme organique) **/
   animation: animAppear 1000ms forwards cubic-bezier(0.37, 1.67, 0.54, 0.93);
   animation-delay: 600ms;
 }
@@ -94,6 +94,7 @@ a {
 }
 
 .loader {
+  /** Appel de la keyframe + durée + timing + fill-mode **/
   animation: dispear 250ms 2500ms linear both;
   display: flex;
   align-items: center;
