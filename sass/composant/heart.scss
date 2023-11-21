@@ -10,12 +10,12 @@
         }
         &:hover .heart__full {
             transform: scale(1);
-            -webkit-background-clip: text; /** pour fonctionnement chrome et safari **/
         }
     }
     &__empty {
         position: absolute;
         color: black;
+        transition: all 300ms;
     }
     &__full {
         position: absolute;
